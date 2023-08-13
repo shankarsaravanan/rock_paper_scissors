@@ -14,4 +14,24 @@ function randomOptionPicker() {
   return randomOption;
 }
 
-console.log(randomOptionPicker());
+let computerInput = randomOptionPicker();
+
+// Keep track of score
+
+let userScore = 0;
+let computerScore = 0;
+
+//Gameplay
+// If user chosen Rock
+
+if (userInput === "rock" && computerInput === "rock") {
+  console.log("It's a tie! Both of you chosen Rock 🪨");
+} else if (userInput === "rock" && computerInput === "paper") {
+  computerScore += 1;
+  console.log("+1 for computer! It has chosen Paper 📄");
+} else if (userInput === "rock" && computerInput === "scissor") {
+  userScore += 1;
+  console.log("+1 for you! Computer has chosen Scissor ✂️");
+}
+
+console.log(userScore, computerScore);
